@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var length = "1"
+var length = ""
 var upper = false
 var lower = false
 var numeric = false
@@ -12,13 +12,34 @@ var password = function (){
   //user input
 
   //notice to user
-  window.alert("You will need to select at least one type of character (uppercase,lowercase, numeric, or special) in order to generate a password. If you do not select at least one, you will need to answer all the questions again.")
-  //length condition
-  var length = window.prompt("Enter a password length between 8 and 128 (inclusive).")
-  while (length.isInteger = false || length < 8 || length > 128) {
-    length = window.prompt("The length you entered is not valid, please enter a number between 8 and 128 (inclusive).")
+
+  //window.alert("You will need to select at least one type of character (uppercase,lowercase, numeric, or special) in order to generate a password. If you do not select at least one, you will need to answer all the questions again.")
+
+  //length condition incl variable type
+  var length = window.prompt("Enter a password length between 8 and 128 (inclusive).");
+  
+  while (Number.isInteger(length) === false) {
+    length = window.prompt("The length you entered is not valid, please enter a number between 8 and 128 (inclusive).");
+    if (Number.isInteger(length) === false){
+      break;}
   }
-  window.alert ("Your password will be "+length+" characters long")
+
+  while ((length < 8) || (length > 128)) {
+    length = window.prompt("The length you entered is not valid, please enter a number between 8 and 128 (inclusive).");
+    if ((length > 7) && (length < 129)){
+      break;}
+  }
+  window.alert ("Your password will be "+length+" characters long");
+
+
+  /*
+
+   )
+
+  
+
+ 
+
 
   //need to select at least one type of character
   while ((upper = false) && (lower = false) && (numeric = false) && (special = false)){
@@ -71,8 +92,10 @@ var password = function (){
   }
   //now need to select & combine random elements of actualcharstring to create the actual password using user inputted length.
   }
+  */
 }
-  
+
+password()
    
 
 
@@ -85,7 +108,7 @@ var password = function (){
 
 
 
-
+/*
 
 // Write password to the #password input
 function writePassword() {
@@ -98,3 +121,5 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+*/
