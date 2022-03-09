@@ -21,7 +21,7 @@ var password = function (){
   window.alert ("Your password will be "+length+" characters long")
 
   //need to select at least one type of character
-  while (upper = false && lower = false && numeric = false && special = false){
+  while ((upper = false) && (lower = false) && (numeric = false) && (special = false)){
   
     //upper case condition
     var upper = window.confirm("Do you want upper case characters included?")
@@ -70,6 +70,7 @@ var password = function (){
     }
   }
   //now need to select & combine random elements of actualcharstring to create the actual password using user inputted length.
+  }
 }
   
    
