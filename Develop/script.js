@@ -1,11 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var passLength = "8"
-var upper = true
-var lower = true
-var numeric = true
-var special = true
+var passLength = ""
+var upper = false
+var lower = false
+var numeric = false
+var special = false
 
 
 var password = function (){
@@ -17,24 +17,21 @@ var password = function (){
 
   //password length condition incl variable type
   var passLength = window.prompt("Enter a password length between 8 and 128 (inclusive).");
-  while ((Number.isInteger(passLength) === false) || (length < 8) || (passLength > 128)) {
+  while ((Number.isInteger(parseInt(passLength))=== false) || (passLength < 8) || (passLength > 128)) {
     passLength = window.prompt("The length you entered is not valid, please enter a number between 8 and 128 (inclusive).");
-    if ((Number.isInteger(passLength) === false) && (passLength > 7) && (passLength < 129)){
+    if ((Number.isInteger(parseInt(passLength)) === true) && (parseInt(passLength) > 7) && (parseInt(passLength) < 129)){
       break;
     }
   }
-  //alerting 
+
+  //repeating current choice to user, changing passLength to integer for later. 
   window.alert ("Your password will be "+passLength+" characters long");
   passLength = parseInt(passLength);
 
   
-
-  
-  //
-  
   //while all choices are false, ask for each choice until user selects at least one.
   do { 
-    //lower case choice
+    //upper case choice
     upper = window.confirm("Do you want upper case characters included?");
     if (upper){
       window.alert("You have chosen to include upper case characters.");
@@ -52,7 +49,7 @@ var password = function (){
       window.alert("You have chosen NOT to include lower case characters.");
     }
 
-    //numeric condition
+    //numeric choice
     numeric = window.confirm("Do you want numeric characters included?");
     if (numeric){
       window.alert("You have chosen to include numeric characters.");
@@ -61,7 +58,7 @@ var password = function (){
       window.alert("You have chosen NOT to include numeric characters.");
     }
 
-    //special condition
+    //special choice
     special = window.confirm("Do you want special characters included?")
     if (special){
       window.alert("You have chosen to include special characters.")
@@ -77,11 +74,6 @@ var password = function (){
 
   } while ((upper == false) && (lower == false) && (numeric == false) && (special == false)); 
  
-
-  
-
-   
-
   //password generation
   var actualCharOptions = "";
   var inputList = [upper, lower, numeric, special];
@@ -97,7 +89,6 @@ var password = function (){
   for (let i=0; i<(passLength-1); i++){
     result += actualCharOptions.charAt(Math.floor(Math.random() * actualCharOptions.length));
   }
-
 return result;
 }
 
