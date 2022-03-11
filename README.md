@@ -1,18 +1,28 @@
-# 03 JavaScript: Password Generator
+# Challenge-03: Javascript - Password Generator
+## By Tyler Flynn
+tyler94flynn@gmail.com
+#
 
-Create an application that generates a random password based on user-selected criteria. The app runs in the browser and features dynamically updated HTML and CSS powered by your JavaScript code. It has a clean and polished user interface and is responsive, which ensures that it adapts to multiple screen sizes.
+## Table of Contents
+* [Link to Page](#link-to-page)
+* [Description](#description)
+* [Project Overview](#project-overview)
+* [Grading Criteria](#grading-criteria)
+#
 
-If you are unfamiliar with special characters, take a look at some [examples of special characters on the OWASP Foundation website](https://www.owasp.org/index.php/Password_special_characters).
+## Link to Page
 
-## User Story
+[https://tyler94flynn.github.io/challenge-03/](https://tyler94flynn.github.io/challenge-03/)
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+## Description
+A password generator built in Javascript, which, on the click of a button:
+- Asks the user for length and type of characters included in the password
+- Confirms their inputs at each stage, and
+- Asks for new inputs if the user inputs are not in the correct format.
 
-## Acceptance Criteria
+## Project Overview
+
+### Acceptance Criteria
 
 ```
 GIVEN I need a new, secure password
@@ -32,17 +42,25 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 
-The following image demonstrates the application functionality:
+## Grading Criteria
 
-![An app window with the label Password Generator, an input field labeled Your Secure Password, and a Generate Password button.](./Assets/03-javascript-homework-demo.png)
+### Technical: 40%
+- Satisfies all of the preceding acceptance criteria.​
 
-## Review
+### Deployment: 32%
+- Application deployed at live URL.
+- Application loads with no errors.
+- Application GitHub URL submitted.
+- GitHub repository that contains application code.
 
-You are required to submit the following for review:
+### Application Quality: 15%
+- Application user experience is intuitive and easy to navigate.
+- Application user interface style is clean and polished.
+- Application resembles the mock-up functionality provided in the Challenge instructions.
 
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+### Repository Quality: 13%
+- Repository has a unique name.
+- Repository follows best practices for file structure and naming conventions.
+- Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+- Repository contains multiple descriptive commit messages.
+- Repository contains quality README file with description, screenshot, and link to deployed application.
