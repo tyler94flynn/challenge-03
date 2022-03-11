@@ -1,4 +1,5 @@
 // Assignment Code
+//assigns generatebtn to button div in html
 var generateBtn = document.querySelector("#generate");
 
 var passLength = ""
@@ -8,7 +9,7 @@ var numeric = false
 var special = false
 
 
-var password = function (){
+var generatePassword = function (){
 
   //user input
 
@@ -78,7 +79,7 @@ var password = function (){
   var actualCharOptions = "";
   var inputList = [upper, lower, numeric, special];
   var possibleCharOptions = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz", "0123456789", "~`!@#$%^&*()-_+={}[]|:;/\"\'\\<>,.?"];
-  var result = ""
+  var result = "";
   //generate string including all possible characters
   for (let i=0; i<4; i++){
     if (inputList[i]){
@@ -91,9 +92,6 @@ var password = function (){
   }
 return result;
 }
-
-//call password function.
-password()
    
 
 // Write password to the #password input
@@ -107,3 +105,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
