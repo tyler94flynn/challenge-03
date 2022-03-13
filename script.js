@@ -2,11 +2,11 @@
 //assigns generatebtn to button div in html
 var generateBtn = document.querySelector("#generate");
 
-var passLength = ""
-var upper = false
-var lower = false
-var numeric = false
-var special = false
+var passLength = "";
+var upper = false;
+var lower = false;
+var numeric = false;
+var special = false;
 
 
 var generatePassword = function (){
